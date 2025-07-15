@@ -1,12 +1,13 @@
 import { ChangeDetectionStrategy, Component, computed, inject, input, OnInit, signal } from '@angular/core';
 import { rxResource } from '@angular/core/rxjs-interop';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { ProductsService } from '@products/services/products.service';
+import { ProductCarouselComponent } from "@products/components/productCarousel/productCarousel.component";
 
 @Component({
   selector: 'app-product-page',
   standalone: true,
-  imports: [],
+  imports: [ProductCarouselComponent],
   templateUrl: './product-page.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
